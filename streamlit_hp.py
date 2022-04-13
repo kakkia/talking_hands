@@ -20,7 +20,7 @@ Do you want to give us a hand? You can upload a picture of your gesture and you 
 So far the model has only been trained with:""")
     
     from PIL import Image
-    hp = Image.open('Desktop/WBS_bootcamp/talking_hands/images/gestures.jpg')
+    hp = Image.open('images/gestures.jpg')
     st.image(hp, width=None)
     
     #load_image()
