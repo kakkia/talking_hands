@@ -14,11 +14,13 @@ st.write("""
 When speaking Italian it is mandatory that you express your emotions with your hands. \n
 #TalkingHands is the first image classification app that will help you to express your emotions when you just can’t find the words. \n
 For my final project in Data Science at the WBS Coding School, I trained a convolutional neural network to automatically classify three different hand gestures commonly used in Italy. You will be finally able to understand Italians by looking at their hands!\n
-Do you want to give us a hand? You can upload a picture of your gesture and you will find how what it means and how to use it.\n
 So far the model has only been trained with:""")
 
 hp = Image.open('Desktop/WBS_bootcamp/talking_hands/images/gestures.jpg')
 st.image(hp, width=None)
+
+st.write("Do you want to give us a hand? You can upload a picture of your gesture and you will find how what it means and how to use it.")
+
 
 uploaded_file = st.file_uploader(label='Upload your picture')
 if uploaded_file is not None:
@@ -49,21 +51,22 @@ def predict_class(image):
 def class_description(label):
     
     if label == "what":
-        text = st.markdown("""<h4>What?</h4>
+        text = st.markdown("""<h4>What the hell are you saying?</h4>
         <li>The tips of the fingers of one hand are brought sharply together to form an upward-pointing cone.</li>
         <li>The hand can either be held motionless or be shaken more or less violently up and down.</li>
         <li>How fast you move it, depends on the degree of impatience expressed.</li>
         <li>Don't be afraid of using it when someone tells you something upsetting.</li>""", True)
     elif label == "shoo":
-        text = st.markdown("""<h4>Or: Take a look at him!</h4>
+        text = st.markdown("""<h4>Get lost!</h4>
          <li>The arm is stuck out in front and the palm rotated upward, while the face takes on a look of righteous indignation. </li>
          <li>You can slowly move the arm as to follow the person from afar until you can't see them anymore.</li>
-         <li>This is used to criticize and ridicule someone's actions, words or appearance.</li>""",True)
+         <li>This is used to criticize and ridicule someone's actions, words or appearance.</li>
+         <li>You are politely asking someone to leave before you can actually say something about them.</li>""",True)
     else:
-        text = st.markdown("""<h4>Perfect</h4>
+        text = st.markdown("""<h4>That's just perfect</h4>
         <li>This gesture express both approval and hearty satifaction.</li>
         <li>It is typical of the good-natured and contented gourmet.</li>
-        <li>Use it anythime you find something delicious, or you completely agree with someone.</li>""",True)
+        <li>Use it anythime you find something delightful - and remember it's not only about food.</li>""",True)
     return text
 
 if pred_gesture:  
