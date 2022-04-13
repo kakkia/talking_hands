@@ -28,6 +28,6 @@ So far the model has only been trained with:""")
 if __name__ == '__main__':
     main()
 
-if st.button('Upload a picture and predict your gesture'):
+if st.button('Upload and predict your gesture'):
      st.write('Not just yet. I am still training my model...')
 
