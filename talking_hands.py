@@ -12,8 +12,10 @@ st.header("The fine art of Italian gestures")
 
 st.write("""
 When speaking Italian it is mandatory that you express your emotions with your hands. \n
-This is the first classification app for gestures used everyday by Italians. It will help you to recognize and use the appropriate gesture when you just can't find the words. \n
-I have trained a model to predict the three hand gestures represented below: """)
+#TalkingHands is the first image classification app that will help you to express your emotions when you just can’t find the words. \n
+For my final project in Data Science at the WBS Coding School, I trained a convolutional neural network to automatically classify three different hand gestures commonly used in Italy. You will be finally able to understand Italians by looking at their hands!\n
+Do you want to give us a hand? You can upload a picture of your gesture and you will find how what it means and how to use it.\n
+So far the model has only been trained with:""")
 
 hp = Image.open('Desktop/WBS_bootcamp/talking_hands/images/gestures.jpg')
 st.image(hp, width=None)
